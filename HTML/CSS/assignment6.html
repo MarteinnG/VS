@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - CSS Form</title>
+    <style>
+        body {
+            margin: 120px;
+            font-family: calibri;
+        }
+        h4 {
+            margin: 0px;
+        }
+        .text-box {
+            height: 150px;
+            width: 460px;
+            background-color: #ffffff;
+            text-align: justify;
+        }
+        .b1 {
+            height: 305px;
+            width: 150px;
+            background-color: red;
+            box-shadow: 0 3px 3px rgb(245, 216, 212), -3px -3px 3px rgb(245, 216, 212);
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .b2 {
+            height: 305px;
+            width: 300px;
+            box-shadow: 3px 3px 3px rgb(245, 216, 212), 0 -3px 3px rgb(245, 216, 212);
+        }
+        .flexbox {
+            display: flex;
+        }
+        .box2-setup {
+            font-size: x-small;
+            margin: 10px;
+        }
+        input {
+            width: 130px;
+            height: 25px;
+            border-color: rgb(250, 111, 111);
+            border-width: 1px;
+        }
+        textarea {
+            border-color: rgb(237, 35, 35);
+            margin-bottom: 5px;
+        }
+        button {
+            background-color: red;
+            border-color: red;
+            color: #ffffff;
+            font-size: xx-small;
+            width: 280;
+            height: 30px;
+        }
+        .h4 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        h5 {
+            margin-top: 25px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>NTV</h4>
+        <h4>FK2 - Vefforritun</h4>
+        <h4>Tímaverkefni 4</h4>
+    </div>
+    <div class="text-box">
+        <p>NTV vill setja í loftið litla vefsíðu til að taka á móti skilaboðum.  Björgvin hönnuður var fenginn til að hanna síðuna og hann sendi þér skjáskot úr hönnunartólinu Figma.  Þitt verkefni er að útfæra þessa vefsíðu þannig að hún líti út eins og lagt var upp með í hönnuninni.  Björgvin er mikill nákvæmnismaður svo það er eins gott að vanda vel til verka.</p>
+    </div>
+    <div class="flexbox">
+        <div class="b1">
+            <h4 class="h4">Contact NTV</h4>  
+        </div>
+        <div class="b2">
+            <h5>Email Us</h5>
+            <div class="flexbox">
+                <div>
+                    <form class="box2-setup">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                        <br>
+                        <br>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email">
+                    </form>
+                </div>
+                <div>
+                    <form class="box2-setup">
+                        <label for="company">Company</label>
+                        <input type="text" id="company">
+                        <br>
+                        <br>
+                        <label for="phone">Phone Number</label>
+                        <input type="number" id="phone">
+                    </form>
+                </div>
+            </div>
+            <div>
+                <form class="box2-setup">
+                    <label for="bio">Message</label>
+                    <textarea name="Message" id="bio" cols="35" rows="4"></textarea>
+                    <br>
+                    <br>
+                    <button>SUBMIT</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
