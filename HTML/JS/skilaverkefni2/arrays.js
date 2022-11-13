@@ -75,16 +75,19 @@ const getLongestStringFromArray = (arr) => {
 
 // ---------------------------------------
 
-// 9.
-const areAllEqual = (arr) => {
-    arr.forEach(element => {
-        element === element[0];
-    }) 
-    if(element === element[0]) {
-        return true
-    } else {
-        return false
-    }
-    
+// 9. 
+const areAllEqual = (arr) => { 
+    return arr.every(value => value === arr[0]);
 }
+
+// ---------------------------------------
+
+// 10. 
+
+const mergeAllArrays = (...arrays) => {
+    const merged = [].concat(...arrays);
+    return merged;
+}
+
+
 

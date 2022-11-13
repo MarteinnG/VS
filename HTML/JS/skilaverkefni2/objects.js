@@ -1,9 +1,10 @@
-// 1.
+// 1. XXX
 const checkIfPropertyExistsAndTruthy = (a, b) => {
-    return 
+    const exist = a.hasOwnProperty(b);
+    if(exist) {
+        return exist;
+    }
 }
-
-console.log(checkIfPropertyExistsAndTruthy);
 
 // ---------------------------------------
 
@@ -30,8 +31,98 @@ const getPropertyByString = (obj, key) => {
 
 // 5.
 const checkIfPropertyExists = (a, b) => {
-    return 
+    const exist = a.hasOwnProperty(b);
+    return exist;
 }
+
+// ---------------------------------------
+
+// 6.
+
+const createObjectWithKeyValue = (a) => {
+    const b = {key: a}
+    return b;
+}
+
+// ---------------------------------------
+
+// 7.
+
+const createObjectWithKeyAndValue = (a, b) => {
+    const c = {[a]: b};
+    return c;
+}
+
+// ---------------------------------------
+
+// 8.
+
+const createObjectFromArrays = (a, b) => {
+    const c = {};
+    a.forEach((key, value) => {c[key] = b[value]});
+    return c;
+}
+
+// ---------------------------------------
+
+// 9.
+
+const extractKeysFromObject = (a) => {
+    return Object.keys(a);
+}
+
+// ---------------------------------------
+
+// 10. xxx
+
+const getNestedProperty = (obj) => {
+    return obj, 'a.b';
+}
+
+// ---------------------------------------
+
+// 11.
+
+const calcSumOfAllObjectValues = (a) => {
+    let sumValues = 0;
+    Object.values(a).forEach(value => {sumValues += value});
+    return sumValues;
+}
+
+// ---------------------------------------
+
+// 12.
+
+const removePropertyB = (obj) => {
+    const {b, ...restObject} = obj;
+    return restObject;
+}
+
+// ---------------------------------------
+
+// 13.
+
+const mergeAndFixObjects = (x, y) => {
+    y.d = y.b;
+    delete y.b;
+    const merge = {...x, ...y};
+    return merge;
+}   
+
+// ---------------------------------------
+
+// 14. XXX
+
+const multipyAllValuesByB = (a, b) => {
+    Object.values(a).forEach(value => {b * value});
+    return a;
+}
+
+
+
+
+
+
 
 
 
